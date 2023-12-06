@@ -1,10 +1,19 @@
+import { useState } from "react";
+
 const App = () => {
 
-  let data = "boy";
+  const [x, setx] = useState(0);
+
+  const btnClick = () => {
+    console.log("Click Registered");
+    setx(x+1);
+    console.log(x);
+  }
 
   return (
     <div>
-      {data==="boy"?<h1>Dog</h1>:<h1>Cat</h1>}
+      {x}
+      <button onClick={()=>{btnClick()}}>Click Here</button>
     </div>
   )
 }
