@@ -1,8 +1,9 @@
 
-const FirstComponent = (props) => {
+const FirstComponent = ({data,fn}) => {
   return (
     <div>
-      {props.data}
+        <button onClick={()=>{fn(10)}}>Set 10</button>
+      {data}
     </div>
   )
 }
