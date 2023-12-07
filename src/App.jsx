@@ -1,20 +1,15 @@
-import { useState } from "react";
-import FirstComponent from "./components/FirstComponent";
+import { useRef,useState } from "react"
 
 const App = () => {
 
-  const [x, setx] = useState(0);
-
-  const btnClick = () => {
-    console.log("Click Registered");
-    setx(x+1);
-    console.log(x);
-  }
+  const [data,setData] = useState([]);
+  const inputRef = useRef(null);
 
   return (
     <div>
-      <button onClick={()=>{btnClick()}}>Click Here</button>
-      <FirstComponent data={x} fn={setx}/>
+      <input ref={inputRef} type="text"/>
+      <button onClick={()=>{setData([...data,inputRef.current.value])}}>Submit</button>
+      {data.map((item,index)=>{return <h2 key={index}>{item}</h2>})}
     </div>
   )
 }
