@@ -1,3 +1,4 @@
+import Todo from "./Components/Assets/Todo"
 
 const App = () => {
 
@@ -5,7 +6,7 @@ const App = () => {
 
   return (
     <div>
-
+      <Todo/>
     </div>
   )
 }
