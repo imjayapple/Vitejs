@@ -8,8 +8,7 @@ const TodoItems = ({no,display,text}) => {
   return (
     <div className='todoitems'>
       <div className="todoitems-container">
-        <img src={box} alt=""/>
-        <img src={tick} alt=""/>
+        {display===""?<img src={box} alt=""/>:<img src={tick} alt=""/>}
         <div className="todoitems-text">{text}</div>
       </div>
       <img className='todoitems-cross-icon' src={cross} alt=""/>
