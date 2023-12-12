@@ -1,8 +1,6 @@
-import Todo from "./Components/Assets/Todo"
+import Todo from "./Components/Todo"
 
 const App = () => {
-
-
 
   return (
     <div>
